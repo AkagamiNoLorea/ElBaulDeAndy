@@ -22,7 +22,8 @@ useEffect(() => {
         <img src={characters.image} alt="" />
         <h3></h3>
         <p></p>
-      </div>)}
+      </div>
+)};
     </div>
   )
 }
