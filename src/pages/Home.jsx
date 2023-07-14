@@ -1,8 +1,16 @@
-import ShowCharacters from "../components/ShowCharacters.jsx";
+import ShowCharacters from "../components/ShowCharacters"
+import { NavLink } from "react-router-dom"
 
 const Home = () => {
   return (
-    <div><ShowCharacters/></div>
+    <div>
+        <NavLink to ="/create ">
+        
+            <button>Crear</button></NavLink>
+        
+      
+        <ShowCharacters />
+    </div>
   )
 }
 
