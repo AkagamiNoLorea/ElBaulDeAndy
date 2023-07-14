@@ -1,4 +1,4 @@
-body{}
+/*body{}
 .contenedor{
     width: 70%;
     height: 70vh;
@@ -28,4 +28,81 @@ body{}
 
 .img{
     width: 50%;
+}
+*/
+.box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .contenedor {
+    flex-basis: 25%;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .contenedor-img img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .contenedor-datos {
+    margin-top: 10px;
+  }
+  
+  .edit-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    width: 400px;
+  }
+  
+  .edit-form h3 {
+    margin-top: 0;
+  }
+  
+  .edit-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .edit-form input,
+  .edit-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .edit-form button {
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .contenedor {
+      flex-basis: 50%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contenedor {
+      flex-basis: 100%;
+    }
+  
+    .edit-form {
+      width: 90%;
+    }
+  }
+
+button{
+    border-radius: 10px;
+    padding:5px 8px;
+    margin:10px;
 }
