@@ -27,16 +27,16 @@ const store = async(e) =>{
      <h2>Crear personaje nuevo</h2>
      <form onSubmit={store}>
        <div>
-        <label>Name</label>
+        <label>Nombre</label>
         <input type="text" value={nombre} onChange={(e)=>setNombre(e.target.value)}/> 
         </div>
         <div>
-         <label>Image</label>
+         <label>Dirección URL</label>
          <input type="text" value={imagen} onChange={(e) => setImagen(e.target.value)}/>
         </div> 
 
         <div>
-            <label>Description</label>
+            <label>Descripción</label>
             <input type="text" value={descripcion} onChange={(e) => setDescripcion(e.target.value)}/>
         </div>
         <button type="submit">Create character</button>
