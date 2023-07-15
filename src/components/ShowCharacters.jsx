@@ -2,6 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import './showCharacters.css'
 
+
 const url= "http://localhost:8080/characters"
 const ShowCharacters = () => {
 
@@ -16,9 +17,18 @@ const ShowCharacters = () => {
         setCharacters(data);
         console.log(data)
     
- 
+    
     }
 // create, read, update, delete 
+const handleEditCharacter = (characterId) => {
+  // Lógica para redirigir a la página de edición con el ID del personaje
+  navigate(`/edit/${characterId}`)
+};
+
+const handleDeleteCharacter = (characterId) => {
+  // Lógica para redirigir a la página de eliminación con el ID del personaje
+  navigate(`/delete/${characterId}`);
+};
 
   return (
     <div className="box">
@@ -32,8 +42,8 @@ const ShowCharacters = () => {
                 <h3>{character.name}</h3>
                 <p>{character.description}</p>
               </div>
-              <button>Edit</button>
-              <button>Delete</button>
+              {/* link */}<button onClick={() => handleEditCharacter(character.id)}>Editar</button>
+              <button onClick={() => handleDeleteCharacter(character.id)}>Eliminar</button>
             </div>
           ))
         }

@@ -5,7 +5,6 @@ const Home = () => {
   return (
     <div>
         <NavLink to ="/create ">
-        
             <button>Crear</button></NavLink>
         
       
