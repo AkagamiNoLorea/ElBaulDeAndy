@@ -1,46 +1,22 @@
-/*body{}
-.contenedor{
-    width: 70%;
-    height: 70vh;
-    border: solid 1px white;
-    margin-top:20px;
-   
- 
-}
-.box{
-     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-    justify-items: center;
-    position: relative;
-    overflow: hidden;
-   
-}
-.contenedor-img{
-    width: 100%;
-    height: 60%;
-}
-
-.contenedor-datos{
-    width: 100%;
-    height: 30%;
-}
-
-.img{
-    width: 50%;
-}
-*/
 .box {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    
   }
-  
-  .contenedor {
+    .contenedor {
     flex-basis: 25%;
     padding: 10px;
     text-align: center;
+    background: var(--main-brown-color);
+    border: 3px solid brown;
+    margin: 2%;
   }
-  
+  .contenedor button {
+    background: var(--main-grey-color);
+    padding: 1% 6%;
+    border-radius: 1.25rem;
+  }
   .contenedor-img img {
     max-width: 100%;
     height: auto;
@@ -55,12 +31,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 4px;
+    background-color: var(--main-blue-color);
+    border: 5px solid var(--main-darkblue-color);
+    padding: 2%;
+    border-radius: 1.25rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     max-width: 90%;
-    width: 400px;
+    width: 4000px;
+    justify-content: center ;
   }
   
   .edit-form h3 {
@@ -68,6 +46,7 @@
   }
   
   .edit-form label {
+    text-align: left;
     display: block;
     margin-bottom: 5px;
   }
@@ -79,10 +58,14 @@
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-family: 'indie Flower', cursive;
+    font-size: large;
   }
   
   .edit-form button {
     margin-right: 10px;
+    padding: 0.5% 5%;
+    border-radius: 1.25rem;
   }
   
   @media (max-width: 768px) {
@@ -100,9 +83,3 @@
       width: 90%;
     }
   }
-
-button{
-    border-radius: 10px;
-    padding:5px 8px;
-    margin:10px;
-}

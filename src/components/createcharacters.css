@@ -1,0 +1,41 @@
+.cuadrodetexto {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--main-blue-color);
+    border: 5px solid var(--main-darkblue-color);
+    padding: 2%;
+    border-radius: 1.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 80%;
+    width: 4000px;
+    justify-content: center ;
+  }
+  
+  .cuadrodetexto h3 {
+    margin-top: 0;
+  }
+  
+  .cuadrodetextolabel {
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .cuadrodetexto input,
+  .cuadrodetextom textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'indie Flower', cursive;
+    font-size: large;
+  }
+  
+  .cuadrodetexto button {
+    margin-right: 10px;
+    padding: 0.5% 5%;
+    border-radius: 1.25rem;
+  }

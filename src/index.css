@@ -1,0 +1,46 @@
+body{
+    font-family: 'Indie Flower', cursive;
+    background: url('./assets/background.jpg') no-repeat center center fixed;
+    text-align: center;
+    --main-red-color: #FF0000;
+    --main-brown-color: #E5A045;
+    --main-darkbrown-color: #986623;
+    --main-grey-color: #D9D9D9;
+    --main-blue-color: #53A7CC;
+    --main-darkblue-color: #165774; 
+    font-size: x-large
+}
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:  space-between;
+}
+header img{
+    -webkit-filter: drop-shadow(2px 2px 0 black)
+                  drop-shadow(-2px -2px 0 black);
+  filter: drop-shadow(2px 2px 0 black) 
+          drop-shadow(-2px -2px 0 black);
+    width: 3%;
+    margin-left: 3%;
+}
+header h1{
+    font-size: 5rem;
+    color: var(--main-red-color);
+    -webkit-text-stroke: var(--main-red-color) 3px;
+    align-self: center;
+}
+header button{
+    margin-right: 25%;
+    
+}
+button {
+    border-radius: 1.5625rem;
+    background: var(--main-brown-color);
+    cursor: pointer;
+    font-size: large;
+    border: none;
+    font-family: 'indie Flower', cursive;
+    font-weight: bold;
+    margin: 2%;
+}

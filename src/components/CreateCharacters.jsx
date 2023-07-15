@@ -1,7 +1,7 @@
 import {useState} from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
-
+import './createcharacters.css'
 
 const url= "http://localhost:8080/characters"
 
@@ -23,14 +23,15 @@ const store = async(e) =>{
 
   return (
     <>
-     <h2>Crear un elemento</h2>
+    <div className="cuadrodetexto">
+     <h2>Crear personaje nuevo</h2>
      <form onSubmit={store}>
        <div>
-        <label>Nombre</label>
+        <label>Name</label>
         <input type="text" value={nombre} onChange={(e)=>setNombre(e.target.value)}/> 
         </div>
         <div>
-         <label>Imagen</label>
+         <label>Image</label>
          <input type="text" value={imagen} onChange={(e) => setImagen(e.target.value)}/>
         </div> 
 
@@ -38,10 +39,10 @@ const store = async(e) =>{
             <label>Description</label>
             <input type="text" value={descripcion} onChange={(e) => setDescripcion(e.target.value)}/>
         </div>
-        <button type="submit">Crear personaje</button>
+        <button type="submit">Create character</button>
 
      </form>
-    
+    </div>
     </>
    
   )
