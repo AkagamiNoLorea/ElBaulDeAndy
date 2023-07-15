@@ -8,8 +8,9 @@ descripción abajo hay 2 botonoes: Actualizar y Eliminar. Cuando se pulsa Actual
 
 ## Instalación
 Este proyecto está realizado en React, despues de clonarlo necesitaras instalar las siguientes librerías con los siguientes comandos en su Visual Studio Code:
-Node: 
+
 ```
+   Node:
       npm install
 
       npm install react-router-dom
