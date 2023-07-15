@@ -102,19 +102,19 @@ const ShowCharacters = () => {
         <div className="edit-form">
           <h3>Actualizar Caracteristicas</h3>
           <form onSubmit={handleEditFormSubmit}>
-            <label>Nombre:</label>
+            <label>Nombre</label>
             <input
               type="text"
               value={updatedName}
               onChange={(e) => setUpdatedName(e.target.value)}
             />
-            <label>Dirección URL:</label>
+            <label>Dirección URL</label>
             <input
               type="text"
               value={updatedImage}
               onChange={(e) => setUpdatedImage(e.target.value)}
             />
-            <label>Descripción:</label>
+            <label>Descripción</label>
             <textarea
               value={updatedDescription}
               onChange={(e) => setUpdatedDescription(e.target.value)}
