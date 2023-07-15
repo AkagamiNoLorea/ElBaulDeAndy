@@ -92,36 +92,36 @@ const ShowCharacters = () => {
           <br />
           <br />
           <div>
-            <button onClick={() => handleUpdate(character)}>Update</button>
-            <button onClick={() => handleDelete(character.id)}>Delete</button>
+            <button onClick={() => handleUpdate(character)}>Actualizar</button>
+            <button onClick={() => handleDelete(character.id)}>Eliminar</button>
           </div>
         </div>
       ))}
 
       {isEditFormOpen && selectedCharacter && (
         <div className="edit-form">
-          <h3>Update Character</h3>
+          <h3>Actualizar Caracteristicas</h3>
           <form onSubmit={handleEditFormSubmit}>
-            <label>Name:</label>
+            <label>Nombre:</label>
             <input
               type="text"
               value={updatedName}
               onChange={(e) => setUpdatedName(e.target.value)}
             />
-            <label>Image URL:</label>
+            <label>Dirección URL:</label>
             <input
               type="text"
               value={updatedImage}
               onChange={(e) => setUpdatedImage(e.target.value)}
             />
-            <label>Description:</label>
+            <label>Descripción:</label>
             <textarea
               value={updatedDescription}
               onChange={(e) => setUpdatedDescription(e.target.value)}
             ></textarea>
             <div>
-              <button type="submit">Save</button>
-              <button onClick={closeEditForm}>Cancel</button>
+              <button type="submit">Guardar</button>
+              <button onClick={closeEditForm}>Cancelar</button>
             </div>
           </form>
         </div>
