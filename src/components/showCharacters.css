@@ -16,10 +16,11 @@
     background: var(--main-grey-color);
     padding: 1% 6%;
     border-radius: 1.25rem;
+    margin-top: auto;
   }
   .contenedor-img img {
     max-width: 100%;
-    height: auto;
+    height: 350px ;
   }
   
   .contenedor-datos {
@@ -72,6 +73,14 @@
     .contenedor {
       flex-basis: 50%;
     }
+    .box{
+      display:flex;
+      flex-direction: column;
+    }
+    .contenedor button {
+      margin-top:auto;
+    }
+ 
   }
   
   @media (max-width: 480px) {
