@@ -12,7 +12,7 @@ const EditCharacter = ({ characterId }) => {
     const fetchCharacter = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get(`${url}/${characterId}`);
+        const response = await axios.put(`${url}/${characterId}`);
         setCharacter(response.data);
       } catch (error) {
         setError(error.message);

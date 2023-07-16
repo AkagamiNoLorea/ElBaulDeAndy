@@ -42,8 +42,8 @@ const handleDeleteCharacter = (characterId) => {
                 <h3>{character.name}</h3>
                 <p>{character.description}</p>
               </div>
-              {/* link */}<button onClick={() => handleEditCharacter(character.id)}>Editar</button>
-              <button onClick={() => handleDeleteCharacter(character.id)}>Eliminar</button>
+              <link to ="/edit "><button onClick={() => handleEditCharacter(character.id)}>Editar</button></link>
+              <link to ="/delete "><button onClick={() => handleDeleteCharacter(character.id)}>Eliminar</button></link>
             </div>
           ))
         }
