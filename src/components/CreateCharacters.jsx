@@ -49,7 +49,7 @@ const goBack = () => {
             <input type="text" value={descripcion} onChange={(e) => setDescripcion(e.target.value)}/>
         </div>
         <button type="submit">Create character</button>
-        <button type="button" onClick={goBack}>Volver a la página de inicio</button>
+        <button type="button" onClick={goBack}>Go back</button>
      </form>
     </div>
     </>
