@@ -1,85 +1,132 @@
 .box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    
-  }
-    .contenedor {
-    flex-basis: 25%;
-    padding: 10px;
-    text-align: center;
-    background: var(--main-brown-color);
-    border: 3px solid brown;
-    margin: 2%;
-  }
-  .contenedor button {
-    background: var(--main-grey-color);
-    padding: 1% 6%;
-    border-radius: 1.25rem;
-  }
-  .contenedor-img img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .contenedor-datos {
-    margin-top: 10px;
-  }
-  
-  .edit-form {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--main-blue-color);
-    border: 5px solid var(--main-darkblue-color);
-    padding: 2%;
-    border-radius: 1.25rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    max-width: 90%;
-    width: 4000px;
-    justify-content: center ;
-  }
-  
-  .edit-form h3 {
-    margin-top: 0;
-  }
-  
-  .edit-form label {
-    text-align: left;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .edit-form input,
-  .edit-form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: 'indie Flower', cursive;
-    font-size: large;
-  }
-  
-  .edit-form button {
-    margin-right: 10px;
-    padding: 0.5% 5%;
-    border-radius: 1.25rem;
-  }
-  
-  @media (max-width: 768px) {
-    .contenedor {
-      flex-basis: 50%;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .contenedor {
-      flex-basis: 100%;
-    }
-  
-    .edit-form {
-      width: 90%;
-    }
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+.contenedor {
+  width: 27%;
+  padding: 10px;
+  text-align: center;
+  background: var(--main-brown-color);
+  border: 3px solid brown;
+  margin: 2%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contenedor::before {
+  content: "";
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  top: -10px;
+  right: -60px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid black;
+  rotate: 35deg;
+}
+.contenedor::after {
+  content: "";
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  bottom: 10px;
+  left: -60px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid black;
+  rotate: 50deg;
+}
+
+
+.contenedor .buttons {
+  flex-direction: row;
+}
+
+.contenedor button {
+  background: var(--main-grey-color);
+  padding: 1% 6%;
+  border-radius: 1.25rem;
+}
+
+.contenedor-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contenedor-datos {
+  margin-top: 10px;
+}
+
+.edit-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-blue-color);
+  border: 5px solid var(--main-darkblue-color);
+  padding: 2%;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  width: 4000px;
+  justify-content: center;
+}
+
+.edit-form::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 25px;
+  left: 55px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.7);
+}
+
+.edit-form::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 45px;
+  right: 35px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.7);
+}
+
+.edit-form h3 {
+  margin-top: 0;
+}
+
+.edit-form label {
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.edit-form input,
+.edit-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'indie Flower', cursive;
+  font-size: large;
+}
+
+.edit-form button {
+  margin-right: 10px;
+  padding: 0.5% 5%;
+  border-radius: 1.25rem;
+  border: var(--main-darkbrown-color) 4px solid;
+}

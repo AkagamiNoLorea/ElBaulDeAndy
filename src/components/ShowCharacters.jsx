@@ -89,9 +89,7 @@ const ShowCharacters = () => {
             <h3>{character.name}</h3>
             <p>{character.description}</p>
           </div>
-          <br />
-          <br />
-          <div>
+          <div className="buttons">
             <button onClick={() => handleUpdate(character)}>Update</button>
             <button onClick={() => handleDelete(character.id)}>Delete</button>
           </div>

@@ -24,7 +24,7 @@ const store = async(e) =>{
   return (
     <>
     <div className="cuadrodetexto">
-     <h2>Crear personaje nuevo</h2>
+     <h2>Create new character</h2>
      <form onSubmit={store}>
        <div>
         <label>Name</label>
