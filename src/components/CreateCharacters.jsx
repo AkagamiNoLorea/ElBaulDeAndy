@@ -15,10 +15,19 @@ const navigate = useNavigate()
 
 const store = async(e) =>{
     e.preventDefault()
-    console.log(e)
+   
+    if (!nombre || !imagen || !descripcion) {
+      navigate("/");
+      return;
+    }
+
     await axios.post(url,{ name: nombre, img: imagen, description: descripcion  })
     navigate("/")
 }
+
+const goBack = () => {
+  navigate("/");
+};
 
 
   return (
@@ -27,20 +36,20 @@ const store = async(e) =>{
      <h2>Create new character</h2>
      <form onSubmit={store}>
        <div>
-        <label>Name</label>
+        <label>Nombre</label>
         <input type="text" value={nombre} onChange={(e)=>setNombre(e.target.value)}/> 
         </div>
         <div>
-         <label>Image</label>
+         <label>Dirección URL</label>
          <input type="text" value={imagen} onChange={(e) => setImagen(e.target.value)}/>
         </div> 
 
         <div>
-            <label>Description</label>
+            <label>Descripción</label>
             <input type="text" value={descripcion} onChange={(e) => setDescripcion(e.target.value)}/>
         </div>
         <button type="submit">Create character</button>
-
+        <button type="button" onClick={goBack}>Volver a la página de inicio</button>
      </form>
     </div>
     </>
