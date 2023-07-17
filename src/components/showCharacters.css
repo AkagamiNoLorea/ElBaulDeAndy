@@ -115,13 +115,13 @@
 
 .edit-form input,
 .edit-form textarea {
-  width: 100%;
+  width: calc(100% - 20px);
   padding: 8px;
   margin-bottom: 10px;
+  margin-left: 2px;
+  margin-right: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-family: 'indie Flower', cursive;
-  font-size: large;
 }
 
 .edit-form button {
