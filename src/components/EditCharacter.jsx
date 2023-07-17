@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
-const EditCharacter = ({ characterId }) => {
+const url = "http://localhost:8080/characters"
+
+const EditCharacter = () => {
   const [character, setCharacter] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const { characterId } = useParams(); 
 
   useEffect(() => {
     const fetchCharacter = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.put(`${url}/${characterId}`);
+        const response = await axios.get(`${url}/${characterId}`);
         setCharacter(response.data);
       } catch (error) {
         setError(error.message);

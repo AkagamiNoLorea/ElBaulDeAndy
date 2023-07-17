@@ -1,26 +1,24 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
-import CreateCharacters from "../components/CreateCharacters";
+import SaveCharacter from "../components/SaveCharacter";
 import EditCharacter from "../components/EditCharacter";
 import DeleteCharacter from "../components/DeleteCharacter";
 
 export const router = createBrowserRouter([
     {
-        path: "/",
-        element: <Home/>
-    },
-    {
         path: "/create",
-        element: <CreateCharacters/>
+        element: <SaveCharacter/>
     },
     {
-        path: "/edit",
+        path: "/edit/:characterId",
         element: <EditCharacter/>
     },
     {
-        path: "/delete",
+        path: "/delete/:characterId",
         element: <DeleteCharacter/>
+    },
+    {
+        path: "/",
+        element: <Home/>
     }
-
-
 ])

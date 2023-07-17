@@ -1,12 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
-
-const DeleteCharacter = ({ characterId }) => {
+const url = "http://localhost:8080/characters"
+const DeleteCharacter = () => {
+  
+  const [character, setCharacter] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const { characterId } = useParams(); 
+
+  useEffect(() => {
+    const fetchCharacter = async () => {
+      setIsLoading(true);
+      try {
+        const response = await axios.get(`${url}/${characterId}`);
+        setCharacter(response.data);
+      } catch (error) {
+        setError(error.message);
+      }
+      setIsLoading(false);
+    };
+
+    fetchCharacter();
+  }, [characterId]);
 
   const handleDeleteCharacter = async () => {
     setIsLoading(true);
@@ -29,7 +48,7 @@ const DeleteCharacter = ({ characterId }) => {
 
   return (
     <div>
-      <h2>Eliminar Personaje</h2>
+      <h2>Eliminar el personaje {character.name} </h2>
       <p>¿Estás seguro de que quieres eliminar este personaje?</p>
       <button onClick={handleDeleteCharacter}>Eliminar</button>
     </div>

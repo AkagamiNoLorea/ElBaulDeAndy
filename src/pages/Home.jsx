@@ -6,8 +6,6 @@ const Home = () => {
     <div>
         <NavLink to ="/create ">
             <button>Crear</button></NavLink>
-        
-      
         <ShowCharacters />
     </div>
   )
