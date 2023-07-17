@@ -28,6 +28,8 @@ const DeleteCharacter = () => {
     fetchCharacter();
   }, [characterId]);
 
+  const goBack = () => {
+    navigate("/");
   const handleDeleteCharacter = async () => {
     setIsLoading(true);
     try {

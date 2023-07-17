@@ -21,6 +21,8 @@ const store = async(e) =>{
     navigate("/")
 }
 
+const goBack = () => {
+  navigate("/");
 
   return (
     <>

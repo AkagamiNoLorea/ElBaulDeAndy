@@ -14,6 +14,8 @@ const [descripcion,setDescripcion] = useState('')
 
 const navigate = useNavigate()
 
+const goBack = () => {
+  navigate("/");
 const store = async(e) =>{
     e.preventDefault()
     console.log(e)

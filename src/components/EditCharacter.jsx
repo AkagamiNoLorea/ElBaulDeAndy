@@ -32,6 +32,9 @@ const EditCharacter = () => {
     setCharacter({ ...character, [event.target.name]: event.target.value });
   };
 
+  const goBack = () => {
+    navigate("/");
+    
   const handleEditCharacter = async (event) => {
     event.preventDefault();
     setIsLoading(true);
