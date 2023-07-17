@@ -6,12 +6,12 @@ import './showCharacters.css'
 
 const url = "http://localhost:8080/characters"
 const DeleteCharacter = () => {
-  
+
   const [character, setCharacter] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-  const { characterId } = useParams(); 
+  const { characterId } = useParams();
 
   useEffect(() => {
     const fetchCharacter = async () => {
@@ -30,6 +30,7 @@ const DeleteCharacter = () => {
 
   const goBack = () => {
     navigate("/");
+  }
   const handleDeleteCharacter = async () => {
     setIsLoading(true);
     try {
@@ -52,9 +53,10 @@ const DeleteCharacter = () => {
   return (
     <div>
       <div className="form">
-      <h2>Eliminar el personaje {character.name} </h2>
-      <p>¿Estás seguro de que quieres eliminar este personaje?</p>
-      <button onClick={handleDeleteCharacter}>Eliminar</button>
+        <h2>Eliminar el personaje {character.name} </h2>
+        <p>¿Estás seguro de que quieres eliminar este personaje?</p>
+        <button onClick={handleDeleteCharacter}>Eliminar</button>
+        <button type="button" onClick={goBack}>Cancelar</button>
       </div>
     </div>
   );

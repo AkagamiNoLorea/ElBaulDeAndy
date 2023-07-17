@@ -16,6 +16,7 @@ const navigate = useNavigate()
 
 const goBack = () => {
   navigate("/");
+}
 const store = async(e) =>{
     e.preventDefault()
     console.log(e)
@@ -43,7 +44,7 @@ const store = async(e) =>{
             <input type="text" value={descripcion} onChange={(e) => setDescripcion(e.target.value)}/>
         </div>
         <button type="submit">Crear personaje</button>
-
+        <button type="button" onClick={goBack}>Cancelar</button>
      </form>
     </div>
     </>

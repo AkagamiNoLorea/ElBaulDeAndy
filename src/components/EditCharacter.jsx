@@ -34,7 +34,8 @@ const EditCharacter = () => {
 
   const goBack = () => {
     navigate("/");
-    
+  }
+
   const handleEditCharacter = async (event) => {
     event.preventDefault();
     setIsLoading(true);
@@ -91,6 +92,7 @@ const EditCharacter = () => {
           />
         </div>
         <button type="submit">Guardar cambios</button>
+        <button type="button" onClick={goBack}>Cancelar</button>
       </form>
       </div>
     </div>
