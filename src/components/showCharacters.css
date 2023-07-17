@@ -1,31 +1,98 @@
-body{}
-.contenedor{
-    width: 70%;
-    height: 70vh;
-    border: solid 1px white;
-    margin-top:20px;
-   
- 
-}
-.box{
-     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 
-    justify-items: center;
-    position: relative;
-    overflow: hidden;
-   
-}
-.contenedor-img{
-    width: 100%;
-    height: 60%;
 }
 
-.contenedor-datos{
-    width: 100%;
-    height: 30%;
+.card {
+  width: 27%;
+  height: 75vh;
+  padding: 10px;
+  text-align: center;
+  background: white;
+  border: 10px groove green;
+  border-radius: 1rem;
+  margin: 2%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-shadow:rgba(0, 4, 4, 4, 0.9);
 }
 
-.img{
-    width: 50%;
+.card .buttons {
+  position: absolute;
+  bottom: 10px;
+  width: 96%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
+.card button  {
+  background: var(--main-grey-color);
+  border: 2px darkslategrey solid;
+  padding: 1% 2% 1% 2%;
+  border-radius: 1rem;
+  width: 40%;
+  cursor: pointer;
+  font-size: x-large;
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  margin: 2%;
+
+}
+
+.contenedor-img img {
+  max-width: 100%;
+}
+
+.contenedor-datos {
+  margin-top: 10px;
+}
+
+.form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-blue-color);
+  border: 5px solid var(--main-darkblue-color);
+  padding: 2%;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  width: 4000px;
+  justify-content: center;
+}
+
+.form label{
+  text-align: left;
+  font-size: 2rem;
+}
+
+.form input{
+  width: 100%;
+  height: 3vh;
+}
+
+.form div{
+  display: flex;
+  flex-direction: column;
+
+}
+.form button {
+  margin-top: 2%;
+  width: 10vw;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  background: var(--main-brown-color);
+  cursor: pointer;
+  border: 3px solid var(--main-darkbrown-color);
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  padding: .5%;
 }

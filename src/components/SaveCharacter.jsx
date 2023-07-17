@@ -1,6 +1,7 @@
 import {useState} from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
+import './showCharacters.css'
 
 
 const url= "http://localhost:8080/characters"
@@ -23,6 +24,7 @@ const store = async(e) =>{
 
   return (
     <>
+    <div className="form">
      <h2>Crear un elemento</h2>
      <form onSubmit={store}>
        <div>
@@ -41,7 +43,7 @@ const store = async(e) =>{
         <button type="submit">Crear personaje</button>
 
      </form>
-    
+    </div>
     </>
    
   )

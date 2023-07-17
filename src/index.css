@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+}
+body{
+    font-family: 'Caveat', cursive;
+    background: url('./assets/room.jpeg') no-repeat center fixed;
+    background-size: cover;
+    text-align: center;
+    --main-red-color: #FF0000;
+    --main-brown-color: #D5D0BA;
+    --main-darkbrown-color: #B5823A;
+    --main-grey-color: #D5D0BA;
+    --main-blue-color: #CCC3AF;
+    --main-darkblue-color: #947966; 
+    font-size: x-large
+}
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:  center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+header h1{
+    font-size: 6rem;
+    color: var(--main-red-color);
+    align-self: center;
+}
+header button{
+    margin-left: 25%;
+    width: 300px;
+    border-radius: 1.5625rem;
+    background: var(--main-brown-color);
+    cursor: pointer;
+    font-size: x-large;
+    border: 3px solid var(--main-darkbrown-color);
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+    padding: 2%;
+}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import './showCharacters.css'
 
 const url = "http://localhost:8080/characters"
 
@@ -53,6 +54,7 @@ const EditCharacter = () => {
 
   return (
     <div>
+      <div className="form">
       <h2>Editar Personaje</h2>
       <form onSubmit={handleEditCharacter}>
         <div>
@@ -87,6 +89,7 @@ const EditCharacter = () => {
         </div>
         <button type="submit">Guardar cambios</button>
       </form>
+      </div>
     </div>
   );
 };
