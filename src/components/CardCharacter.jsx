@@ -1,5 +1,6 @@
 import './showCharacters.css'
 
+
 export default function CardCharacter (props) {
     
     const character = props.character;
@@ -15,7 +16,7 @@ export default function CardCharacter (props) {
             <div className="buttons">
                 <button onClick={() => props.editCharacter(character) }> Editar </button>
                 <button onClick={() => props.deleteCharacter(character) }> Eliminar </button>
-                </div>
+            </div>
         </div>
         </>
     )
